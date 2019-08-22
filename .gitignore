@@ -1,0 +1,11 @@
+*.iml
+*.class
+.mvn/
+.idea/
+target/
+mvnw
+*.cmd
+src/main/resources/static/
+src/main/resources/application.properties
+src/main/resources/logback-spring.xml
+src/test
