@@ -1,4 +1,4 @@
-package learning.example;
+package learning.example.setup;
 
 public class Card {
 

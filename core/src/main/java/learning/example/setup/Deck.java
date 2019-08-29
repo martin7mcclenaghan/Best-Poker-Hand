@@ -1,4 +1,4 @@
-package learning.example;
+package learning.example.setup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class Deck {
         return instance;
     }
 
-    //instance variables
+    // == instance variables ==
     private List<Card> cards;
 
     // == private constructor ==
@@ -26,6 +26,7 @@ public class Deck {
         this.cards = createCardDeck(new String[]{"C", "S", "D", "H"}, createPossibleNumbers());
     }
 
+    //create possible card values
     private String[] createPossibleNumbers() {
 
         String[] numbers = new String[13];
@@ -42,6 +43,21 @@ public class Deck {
         return numbers;
     }
 
+    //create possible card suits
+    private String [] createPossibleSuits (){
+
+        String [] suits = new String [4];
+
+        suits[0] = "C";
+        suits[1] = "S";
+        suits[2] = "D";
+        suits[3] = "H";
+
+        return suits;
+
+    }
+
+    //creates deck of 52 cards with no jokers
     private List<Card> createCardDeck (String[] suits, String[] numbers){
 
         List<Card> deck = new ArrayList<>();
@@ -58,6 +74,7 @@ public class Deck {
     }
 
     // == instance methods ==
+    //method selects card from deck pseudo-randomly, removes it from deck and returns selected card
     public Card dealCard(){
 
         Random random = new Random();
@@ -67,6 +84,4 @@ public class Deck {
         return cardDealt;
 
     }
-
-
 }
