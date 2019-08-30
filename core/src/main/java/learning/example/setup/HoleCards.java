@@ -1,9 +1,9 @@
 package learning.example.setup;
 
-public class HoleCards extends CardCollection {
+class HoleCards extends CardCollection {
 
     // == constructor ==
-    public HoleCards() {
+    HoleCards() {
         super(2);
     }
 
