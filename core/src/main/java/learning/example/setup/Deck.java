@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Random;
 
 //Singleton Design Pattern as there can only be one deck
-public class Deck {
+class Deck {
 
     // == static members ==
     private static Deck instance;
 
-    public synchronized static Deck getInstance(){
+    synchronized static Deck getInstance(){
 
         if(instance == null){
             instance = new Deck();
@@ -23,7 +23,7 @@ public class Deck {
 
     // == private constructor ==
     private Deck() {
-        this.cards = createCardDeck(new String[]{"C", "S", "D", "H"}, createPossibleNumbers());
+        this.cards = createCardDeck(createPossibleSuits(), createPossibleNumbers());
     }
 
     //create possible card values
@@ -75,7 +75,7 @@ public class Deck {
 
     // == instance methods ==
     //method selects card from deck pseudo-randomly, removes it from deck and returns selected card
-    public Card dealCard(){
+     Card dealCard(){
 
         Random random = new Random();
         int cardNumber = random.nextInt(this.cards.size());
