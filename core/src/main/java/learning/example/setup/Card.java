@@ -1,14 +1,14 @@
 package learning.example.setup;
 
-public class Card {
+class Card {
 
     private String description;
 
-    public Card(String number, String suit) {
+    Card(String number, String suit) {
         this.description = number + suit;
     }
 
-    public String getDescription() {
+    String getDescription() {
         return description;
     }
 
