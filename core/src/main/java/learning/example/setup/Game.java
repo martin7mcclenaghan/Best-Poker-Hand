@@ -9,11 +9,11 @@ public class Game {
     private final HoleCards oppHand;
 
     // == constructor ==
-    public Game(Deck deck, Board board, HoleCards playerHand, HoleCards oppHand) {
-        this.deck = deck;
-        this.board = board;
-        this.playerHand = playerHand;
-        this.oppHand = oppHand;
+    public Game() {
+        this.deck = Deck.getInstance();
+        this.board = Board.getInstance();
+        this.playerHand = new HoleCards();
+        this.oppHand = new HoleCards();
     }
 
     // == public methods ==
