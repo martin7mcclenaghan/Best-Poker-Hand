@@ -1,6 +1,12 @@
 package learning.example.setup;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Game {
+
+    //constants
+    Logger log = LoggerFactory.getLogger(Game.class);
 
     // == fields ==
     private final Deck deck;
@@ -27,6 +33,11 @@ public class Game {
 
     public String getOppHand() {
         return oppHand.getCardsString();
+    }
+
+    public void dealCard (){
+        log.info("Dealing Card to board");
+        board.addCardToBoard();
     }
 
 }

@@ -28,11 +28,19 @@ public class ConsoleBestPokerHand {
         System.out.println("Your cards are " + game.getPlayerHand());
         log.info("Opponents cards are " + game.getOppHand());
 
-        // Stage two - board
-		System.out.println("Now lets see the board");
+        // Stage two - flop
+		System.out.println("Now lets see the flop");
 		System.out.println(game.getBoard());
 
-		//Stage three - what is the best hand you can make?
+		//Stage three - turn
+        System.out.println("Now lets see the turn");
+        game.dealCard();
+        System.out.println(game.getBoard());
+
+        //Stage four - river
+        System.out.println("Now lets see the river");
+        game.dealCard();
+        System.out.println(game.getBoard());
 
 
     }
