@@ -2,6 +2,15 @@ package learning.example.setup;
 
 import java.util.*;
 
+/*
+A PokerHand is defined as 5 cards taken from any of the cards available from the player throughout the Game.
+* The cards available to the player include their hole cards and any of the cards from the board.
+* For the turn and river phases of the Game a player can choose to use only 1 or none of their hole cards
+* if they so wish. It will be assumed that a player will always choose to play the best possible hand that
+* they can. The purpose of this application is to help players learn to always select the best hand they
+* can from selection of 21 possible hands available by the river phase of the game.
+*/
+
 class PokerHand implements Comparable<PokerHand>{
 
     // == constants ==

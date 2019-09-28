@@ -3,6 +3,9 @@ package learning.example.setup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
 
     //constants
@@ -13,6 +16,8 @@ public class Game {
     private final Board board;
     private final HoleCards playerHole;
     private final HoleCards opponentHole;
+    private List<PokerHand> playerPossibleHands;
+    private List<PokerHand> opponentPossibleHands;
 
 
     // == constructor ==
@@ -21,6 +26,8 @@ public class Game {
         this.board = Board.getInstance();
         this.playerHole = new HoleCards();
         this.opponentHole = new HoleCards();
+        this.playerPossibleHands = new ArrayList<>();
+        this.opponentPossibleHands = new ArrayList<>();
     }
 
     // == public methods ==
