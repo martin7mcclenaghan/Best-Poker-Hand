@@ -31,6 +31,8 @@ public class ConsoleBestPokerHand {
         // Stage two - flop
 		System.out.println("Now lets see the flop");
 		System.out.println(game.getBoard());
+        System.out.println("Your best hand is " + game.bestHandFlop(game.getPlayerHole()));
+        log.info("Opponent's best hand is " + game.bestHandFlop(game.getOpponentHole()));
 
 		//Stage three - turn
         System.out.println("Now lets see the turn");

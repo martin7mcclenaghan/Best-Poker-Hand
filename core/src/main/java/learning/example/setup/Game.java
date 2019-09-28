@@ -48,4 +48,12 @@ public class Game {
         board.addCardToBoard();
     }
 
+    public String bestHandFlop (String holeCards){
+
+        String handDescription =  holeCards + getBoard();
+        PokerHand flopHand = new PokerHand(handDescription);
+        return handDescription + "which is a " + flopHand.getClassification().name();
+
+    }
+
 }
