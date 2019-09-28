@@ -11,15 +11,16 @@ public class Game {
     // == fields ==
     private final Deck deck;
     private final Board board;
-    private final HoleCards playerHand;
-    private final HoleCards oppHand;
+    private final HoleCards playerHole;
+    private final HoleCards opponentHole;
+
 
     // == constructor ==
     public Game() {
         this.deck = Deck.getInstance();
         this.board = Board.getInstance();
-        this.playerHand = new HoleCards();
-        this.oppHand = new HoleCards();
+        this.playerHole = new HoleCards();
+        this.opponentHole = new HoleCards();
     }
 
     // == public methods ==
@@ -27,12 +28,12 @@ public class Game {
         return board.getCardsString();
     }
 
-    public String getPlayerHand() {
-        return playerHand.getCardsString();
+    public String getPlayerHole() {
+        return playerHole.getCardsString();
     }
 
-    public String getOppHand() {
-        return oppHand.getCardsString();
+    public String getOpponentHole() {
+        return opponentHole.getCardsString();
     }
 
     public void dealCard (){

@@ -25,8 +25,8 @@ public class ConsoleBestPokerHand {
         Scanner scanner = new Scanner(System.in);
 
         // Stage one - players have their cards and board not yet seen
-        System.out.println("Your cards are " + game.getPlayerHand());
-        log.info("Opponents cards are " + game.getOppHand());
+        System.out.println("Your cards are " + game.getPlayerHole());
+        log.info("Opponents cards are " + game.getOpponentHole());
 
         // Stage two - flop
 		System.out.println("Now lets see the flop");
