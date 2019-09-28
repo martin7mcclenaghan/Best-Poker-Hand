@@ -2,7 +2,7 @@ package learning.example.setup;
 
 import java.util.*;
 
-public class PokerHand implements Comparable<PokerHand>{
+class PokerHand implements Comparable<PokerHand>{
 
     // == constants ==
     enum Result {WIN, LOSS, TIE}
@@ -31,7 +31,7 @@ public class PokerHand implements Comparable<PokerHand>{
     private boolean isStraight;
 
     // == constructor ==
-    public PokerHand(String userDescription) {
+    PokerHand(String userDescription) {
         this.userDescription = userDescription;
         this.description = faceToNumber(userDescription);
         this.sortedCardValues = listSortedCardValues(this.description);
@@ -57,8 +57,21 @@ public class PokerHand implements Comparable<PokerHand>{
         }
     }
 
+    // == package - private methods ==
+    // these will be exposed and utilised by the Game facade class
+
+    // Getter for description that is presented to User.
+    String getUserDescription() {
+        return userDescription;
+    }
+
+    // Getter for Strength of hand that can be understood by User.
+    Strength getClassification() {
+        return classification;
+    }
+
     // method that compares one poker hand to another and returns an enum Result.
-    public Result compareWith (PokerHand hand){
+    Result compareWith (PokerHand hand){
 
         if(this.value > hand.value){
             return Result.WIN;
@@ -99,16 +112,6 @@ public class PokerHand implements Comparable<PokerHand>{
         } else {
             return comparePair(this.uniqueTotals, hand.uniqueTotals);
         }
-    }
-
-    // Getter for description that is presented to User.
-    public String getUserDescription() {
-        return userDescription;
-    }
-
-    // Getter for Strength of hand that can be understood by User.
-    public Strength getClassification() {
-        return classification;
     }
 
     // == private methods ==
