@@ -15,8 +15,8 @@ public class ConsoleBestPokerHand {
     private Game game;
 
     // == constructor ==
-    public ConsoleBestPokerHand() {
-        this.game = new Game();
+    public ConsoleBestPokerHand(Game game ) {
+        this.game = game;
     }
 
     public void playGame() {

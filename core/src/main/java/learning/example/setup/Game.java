@@ -21,11 +21,11 @@ public class Game {
 
 
     // == constructor ==
-    public Game() {
-        this.deck = Deck.getInstance();
-        this.board = Board.getInstance();
-        this.playerHole = new HoleCards();
-        this.opponentHole = new HoleCards();
+    public Game(Deck deck, Board board, HoleCards playerHole, HoleCards opponentHole) {
+        this.deck = deck;
+        this.board = board;
+        this.playerHole = playerHole;
+        this.opponentHole = opponentHole;
         this.playerPossibleHands = new ArrayList<>();
         this.opponentPossibleHands = new ArrayList<>();
     }
