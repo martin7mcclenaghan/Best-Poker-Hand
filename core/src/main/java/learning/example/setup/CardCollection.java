@@ -12,7 +12,7 @@ abstract class CardCollection {
     CardCollection(int size) {
         this.cards = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            this.cards.add(Deck.getInstance().dealCard());
+            this.cards.add(DeckProcessor.getInstance().dealCard());
         }
     }
 

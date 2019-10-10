@@ -5,7 +5,7 @@ public class GameFacade {
     // == public methods ==
     public Game assembleGame() {
 
-        Deck deck = Deck.getInstance();
+        DeckProcessor deck = DeckProcessor.getInstance();
         Board board = Board.getInstance();
 
         //HoleCards must be specified as an implementation to stop players dealing themselves more cards

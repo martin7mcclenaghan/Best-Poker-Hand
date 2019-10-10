@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Random;
 
 //Singleton Design Pattern as there can only be one deck
-class Deck {
+class DeckProcessor {
 
     // == static members ==
-    private static Deck instance;
+    private static DeckProcessor instance;
 
-    synchronized static Deck getInstance(){
+    synchronized static DeckProcessor getInstance(){
 
         if(instance == null){
-            instance = new Deck();
+            instance = new DeckProcessor();
         }
         return instance;
     }
@@ -22,7 +22,7 @@ class Deck {
     private List<Card> cards;
 
     // == private constructor ==
-    private Deck() {
+    private DeckProcessor() {
         this.cards = createCardDeck(createPossibleSuits(), createPossibleNumbers());
     }
 

@@ -26,7 +26,7 @@ class Board extends CardCollection {
         if (this.getCards().size() >= 5) {
             System.out.println("Board can only contain 5 cards! Cannot add anymore!");
         } else {
-            this.getCards().add(Deck.getInstance().dealCard());
+            this.getCards().add(DeckProcessor.getInstance().dealCard());
         }
     }
 
