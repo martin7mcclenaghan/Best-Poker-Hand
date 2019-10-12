@@ -1,6 +1,5 @@
 package learning.example.setup;
 
-//Singleton Design Pattern used as there can only be one board in the whole world - not true if multiple games
 class Board extends CardCollection {
 
     private Dealer dealer;
