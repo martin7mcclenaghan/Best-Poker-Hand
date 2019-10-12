@@ -3,8 +3,8 @@ package learning.example.setup;
 class HoleCards extends CardCollection {
 
     // == constructor ==
-    HoleCards() {
-        super(2);
+    HoleCards(Dealer dealer) {
+        super(2, dealer);
     }
 
 }

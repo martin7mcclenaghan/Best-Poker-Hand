@@ -9,10 +9,10 @@ abstract class CardCollection {
     private List<Card> cards;
 
     // == constructor ==
-    CardCollection(int size) {
+    CardCollection(int size, Dealer dealer) {
         this.cards = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            this.cards.add(DeckProcessor.getInstance().dealCard());
+            this.cards.add(dealer.dealCard());
         }
     }
 
