@@ -3,7 +3,7 @@ package learning.example.setup;
 import java.util.ArrayList;
 import java.util.List;
 
-//Singleton Design Pattern as there can only be one deck
+//Singleton Design Pattern as there can only be one object that creates the possible list of cards in the game
 class DeckProcessor {
 
     // == static members ==
