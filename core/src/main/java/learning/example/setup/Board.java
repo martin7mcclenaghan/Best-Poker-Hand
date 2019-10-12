@@ -7,6 +7,7 @@ class Board extends CardCollection {
 
     public Board(Dealer dealer) {
         super(3, dealer);
+        this.dealer = dealer;
     }
 
     // == instance methods ==
