@@ -12,7 +12,7 @@ public class Game {
     Logger log = LoggerFactory.getLogger(Game.class);
 
     // == fields ==
-    private final DeckProcessor deck;
+    private final Deck deck;
     private final Board board;
     private final HoleCards playerHole;
     private final HoleCards opponentHole;
@@ -21,7 +21,7 @@ public class Game {
 
 
     // == constructor ==
-    public Game(DeckProcessor deck, Board board, HoleCards playerHole, HoleCards opponentHole) {
+    public Game(Deck deck, Board board, HoleCards playerHole, HoleCards opponentHole) {
         this.deck = deck;
         this.board = board;
         this.playerHole = playerHole;
