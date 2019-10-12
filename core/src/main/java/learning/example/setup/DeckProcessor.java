@@ -2,7 +2,6 @@ package learning.example.setup;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 //Singleton Design Pattern as there can only be one deck
 class DeckProcessor {
@@ -18,12 +17,9 @@ class DeckProcessor {
         return instance;
     }
 
-    // == instance variables ==
-    private List<Card> cards;
-
     // == private constructor ==
     private DeckProcessor() {
-        this.cards = createCardDeck(createPossibleSuits(), createPossibleNumbers());
+
     }
 
     //create possible card values
@@ -58,7 +54,7 @@ class DeckProcessor {
     }
 
     //creates deck of 52 cards with no jokers
-    private List<Card> createCardDeck (String[] suits, String[] numbers){
+    private List<Card> createNoJokerDeck (String[] suits, String[] numbers){
 
         List<Card> deck = new ArrayList<>();
 
@@ -74,14 +70,9 @@ class DeckProcessor {
     }
 
     // == instance methods ==
-    //method selects card from deck pseudo-randomly, removes it from deck and returns selected card
-     Card dealCard(){
-
-        Random random = new Random();
-        int cardNumber = random.nextInt(this.cards.size());
-        Card cardDealt = cards.get(cardNumber);
-        this.cards.remove(cardDealt);
-        return cardDealt;
-
+    // returns list of cards forming the standard deck of 52 with no jokers
+    List<Card> getStandard52Cards() {
+        return new ArrayList<>(createNoJokerDeck(createPossibleSuits(),createPossibleNumbers()));
     }
+
 }
