@@ -1,5 +1,9 @@
 package learning.example.setup;
 
+import learning.example.setup.valueObjects.Board;
+import learning.example.setup.valueObjects.Deck;
+import learning.example.setup.valueObjects.HoleCards;
+
 public class GameFacade {
 
     // == public methods ==

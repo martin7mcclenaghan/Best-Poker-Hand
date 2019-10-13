@@ -1,15 +1,17 @@
-package learning.example.setup;
+package learning.example.setup.valueObjects;
+
+import learning.example.setup.Dealer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class CardCollection {
+public abstract class CardCollection {
 
     // == instance variables
     private List<Card> cards;
 
     // == constructor ==
-    CardCollection(int size, Dealer dealer) {
+    public CardCollection(int size, Dealer dealer) {
         this.cards = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             this.cards.add(dealer.dealCard());
@@ -17,7 +19,7 @@ abstract class CardCollection {
     }
 
     // == instance methods ==
-    String getCardsString() {
+    public String getCardsString() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Card card : this.cards) {
             stringBuilder.append(card.getDescription());
@@ -27,7 +29,7 @@ abstract class CardCollection {
         return stringBuilder.toString();
     }
 
-    List<Card> getCards (){
+    public List<Card> getCards (){
         return this.cards;
     }
 }

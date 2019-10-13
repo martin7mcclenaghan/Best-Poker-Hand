@@ -1,8 +1,11 @@
 package learning.example.setup;
 
+import learning.example.setup.valueObjects.Card;
+import learning.example.setup.valueObjects.Deck;
+
 import java.util.Random;
 
-class Dealer {
+public class Dealer {
 
    private final String name;
    private final Deck deck;
@@ -21,7 +24,7 @@ class Dealer {
     }
 
     //method selects card from deck pseudo-randomly, removes it from deck and returns selected card
-    Card dealCard(){
+    public Card dealCard(){
 
         Random random = new Random();
         int cardNumber = random.nextInt(this.deck.getCards().size());

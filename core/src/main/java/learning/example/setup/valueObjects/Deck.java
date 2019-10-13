@@ -1,4 +1,4 @@
-package learning.example.setup;
+package learning.example.setup.valueObjects;
 
 import java.util.List;
 

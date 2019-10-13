@@ -1,6 +1,8 @@
-package learning.example.setup;
+package learning.example.setup.valueObjects;
 
-class Board extends CardCollection {
+import learning.example.setup.Dealer;
+
+public class Board extends CardCollection {
 
     private Dealer dealer;
 
@@ -11,7 +13,7 @@ class Board extends CardCollection {
 
     // == instance methods ==
     // method to add card to the board
-    void addCardToBoard() {
+    public void addCardToBoard() {
         if (this.getCards().size() >= 5) {
             System.out.println("Board can only contain 5 cards! Cannot add anymore!");
         } else {

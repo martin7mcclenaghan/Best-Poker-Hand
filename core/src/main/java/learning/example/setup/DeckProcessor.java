@@ -1,10 +1,12 @@
 package learning.example.setup;
 
+import learning.example.setup.valueObjects.Card;
+
 import java.util.ArrayList;
 import java.util.List;
 
 //Singleton Design Pattern as there can only be one object that creates the possible list of cards in the game
-class DeckProcessor {
+public class DeckProcessor {
 
     // == static members ==
     private static DeckProcessor instance;
@@ -22,6 +24,7 @@ class DeckProcessor {
 
     }
 
+    // == private instance methods ==
     //create possible card values
     private String[] createPossibleNumbers() {
 
@@ -69,9 +72,9 @@ class DeckProcessor {
 
     }
 
-    // == instance methods ==
+    // == public instance methods ==
     // returns list of cards forming the standard deck of 52 with no jokers
-    List<Card> getStandard52Cards() {
+    public List<Card> getStandard52Cards() {
         return new ArrayList<>(createNoJokerDeck(createPossibleSuits(),createPossibleNumbers()));
     }
 

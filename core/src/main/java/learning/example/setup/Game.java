@@ -1,5 +1,8 @@
 package learning.example.setup;
 
+import learning.example.setup.valueObjects.Board;
+import learning.example.setup.valueObjects.Deck;
+import learning.example.setup.valueObjects.HoleCards;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
