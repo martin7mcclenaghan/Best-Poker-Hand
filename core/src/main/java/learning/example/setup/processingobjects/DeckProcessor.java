@@ -11,7 +11,7 @@ public class DeckProcessor {
     // == static members ==
     private static DeckProcessor instance;
 
-    synchronized static DeckProcessor getInstance(){
+    public synchronized static DeckProcessor getInstance(){
 
         if(instance == null){
             instance = new DeckProcessor();
