@@ -1,7 +1,7 @@
 package learning.example.setup;
 
 import learning.example.setup.processingobjects.Dealer;
-import learning.example.setup.processingobjects.DeckProcessor;
+import learning.example.setup.processingobjects.DeckFormatter;
 import learning.example.setup.valueobjects.Board;
 import learning.example.setup.valueobjects.Deck;
 import learning.example.setup.valueobjects.HoleCards;
@@ -11,7 +11,7 @@ public class GameFacade {
     // == public methods ==
     public Game assembleGame() {
 
-        DeckProcessor deckProcessor = DeckProcessor.getInstance();
+        DeckFormatter deckProcessor = new DeckFormatter();
         Deck deck = new Deck(deckProcessor.getStandard52Cards());
         Dealer steve = new Dealer("Steve", deck);
         Board board = new Board(steve);

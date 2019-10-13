@@ -5,26 +5,12 @@ import learning.example.setup.valueobjects.Card;
 import java.util.ArrayList;
 import java.util.List;
 
-//Singleton Design Pattern as there can only be one object that creates the possible list of cards in the game
-public class DeckProcessor {
+public class DeckFormatter {
 
-    // == static members ==
-    private static DeckProcessor instance;
-
-    public synchronized static DeckProcessor getInstance(){
-
-        if(instance == null){
-            instance = new DeckProcessor();
-        }
-        return instance;
+    public DeckFormatter() {
     }
 
-    // == private constructor ==
-    private DeckProcessor() {
-
-    }
-
-    // == private instance methods ==
+    // == private methods ==
     //create possible card values
     private String[] createPossibleNumbers() {
 
@@ -56,7 +42,7 @@ public class DeckProcessor {
 
     }
 
-    //creates deck of 52 cards with no jokers
+    //creates a List of 52 cards with no jokers
     private List<Card> createNoJokerDeck (String[] suits, String[] numbers){
 
         List<Card> deck = new ArrayList<>();
@@ -72,7 +58,7 @@ public class DeckProcessor {
 
     }
 
-    // == public instance methods ==
+    // == public methods ==
     // returns list of cards forming the standard deck of 52 with no jokers
     public List<Card> getStandard52Cards() {
         return new ArrayList<>(createNoJokerDeck(createPossibleSuits(),createPossibleNumbers()));
