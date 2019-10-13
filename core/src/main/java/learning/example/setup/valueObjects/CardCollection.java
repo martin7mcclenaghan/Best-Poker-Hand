@@ -1,6 +1,6 @@
 package learning.example.setup.valueObjects;
 
-import learning.example.setup.Dealer;
+import learning.example.setup.processingObjects.Dealer;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package learning.example.setup;
+package learning.example.setup.processingObjects;
 
 import learning.example.setup.valueObjects.Card;
 import learning.example.setup.valueObjects.Deck;
