@@ -1,4 +1,4 @@
-package learning.example.setup.valueObjects;
+package learning.example.setup.valueobjects;
 
 public class Card {
 

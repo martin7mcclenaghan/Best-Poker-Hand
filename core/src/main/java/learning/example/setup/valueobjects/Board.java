@@ -1,6 +1,6 @@
-package learning.example.setup.valueObjects;
+package learning.example.setup.valueobjects;
 
-import learning.example.setup.processingObjects.Dealer;
+import learning.example.setup.processingobjects.Dealer;
 
 public class Board extends CardCollection {
 

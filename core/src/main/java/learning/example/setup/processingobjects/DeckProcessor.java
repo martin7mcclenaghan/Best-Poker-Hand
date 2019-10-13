@@ -1,6 +1,6 @@
-package learning.example.setup.processingObjects;
+package learning.example.setup.processingobjects;
 
-import learning.example.setup.valueObjects.Card;
+import learning.example.setup.valueobjects.Card;
 
 import java.util.ArrayList;
 import java.util.List;

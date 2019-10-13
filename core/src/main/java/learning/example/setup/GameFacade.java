@@ -1,10 +1,10 @@
 package learning.example.setup;
 
-import learning.example.setup.processingObjects.Dealer;
-import learning.example.setup.processingObjects.DeckProcessor;
-import learning.example.setup.valueObjects.Board;
-import learning.example.setup.valueObjects.Deck;
-import learning.example.setup.valueObjects.HoleCards;
+import learning.example.setup.processingobjects.Dealer;
+import learning.example.setup.processingobjects.DeckProcessor;
+import learning.example.setup.valueobjects.Board;
+import learning.example.setup.valueobjects.Deck;
+import learning.example.setup.valueobjects.HoleCards;
 
 public class GameFacade {
 

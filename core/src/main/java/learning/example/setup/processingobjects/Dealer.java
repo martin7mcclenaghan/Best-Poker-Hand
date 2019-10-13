@@ -1,7 +1,7 @@
-package learning.example.setup.processingObjects;
+package learning.example.setup.processingobjects;
 
-import learning.example.setup.valueObjects.Card;
-import learning.example.setup.valueObjects.Deck;
+import learning.example.setup.valueobjects.Card;
+import learning.example.setup.valueobjects.Deck;
 
 import java.util.Random;
 
