@@ -1,6 +1,6 @@
 package learning.example.console;
 
-import learning.example.setup.Game;
+import learning.example.setup.GameService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,10 +12,10 @@ public class ConsoleBestPokerHand {
     private static final Logger log = LoggerFactory.getLogger(ConsoleBestPokerHand.class);
 
     // == fields ==
-    private Game game;
+    private GameService game;
 
     // == constructor ==
-    public ConsoleBestPokerHand(Game game ) {
+    public ConsoleBestPokerHand(GameService game ) {
         this.game = game;
     }
 

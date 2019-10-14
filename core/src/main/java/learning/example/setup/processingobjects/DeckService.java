@@ -5,12 +5,12 @@ import learning.example.setup.valueobjects.Deck;
 
 import java.util.Random;
 
-public class Dealer {
+public class DeckService {
 
    private final String name;
    private final Deck deck;
 
-    public Dealer(String name, Deck deck) {
+    public DeckService(String name, Deck deck) {
         this.name = name;
         this.deck = deck;
     }

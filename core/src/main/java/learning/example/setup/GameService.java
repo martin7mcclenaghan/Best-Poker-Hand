@@ -9,10 +9,10 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
+public class GameService {
 
     //constants
-    Logger log = LoggerFactory.getLogger(Game.class);
+    Logger log = LoggerFactory.getLogger(GameService.class);
 
     // == fields ==
     private final Deck deck;
@@ -24,7 +24,7 @@ public class Game {
 
 
     // == constructor ==
-    public Game(Deck deck, Board board, HoleCards playerHole, HoleCards opponentHole) {
+    public GameService(Deck deck, Board board, HoleCards playerHole, HoleCards opponentHole) {
         this.deck = deck;
         this.board = board;
         this.playerHole = playerHole;

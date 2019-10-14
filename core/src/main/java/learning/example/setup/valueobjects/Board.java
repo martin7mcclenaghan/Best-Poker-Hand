@@ -1,12 +1,12 @@
 package learning.example.setup.valueobjects;
 
-import learning.example.setup.processingobjects.Dealer;
+import learning.example.setup.processingobjects.DeckService;
 
 public class Board extends CardCollection {
 
-    private Dealer dealer;
+    private DeckService dealer;
 
-    public Board(Dealer dealer) {
+    public Board(DeckService dealer) {
         super(3, dealer);
         this.dealer = dealer;
     }

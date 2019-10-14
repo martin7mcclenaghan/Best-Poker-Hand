@@ -1,6 +1,6 @@
 package learning.example.setup.valueobjects;
 
-import learning.example.setup.processingobjects.Dealer;
+import learning.example.setup.processingobjects.DeckService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public abstract class CardCollection {
     private List<Card> cards;
 
     // == constructor ==
-    public CardCollection(int size, Dealer dealer) {
+    public CardCollection(int size, DeckService dealer) {
         this.cards = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             this.cards.add(dealer.dealCard());
