@@ -36,12 +36,12 @@ public class ConsoleBestPokerHand {
 
 		//Stage three - turn
         System.out.println("Now lets see the turn");
-        game.dealCard();
+        game.addCardToBoard();
         System.out.println(game.getBoard());
 
         //Stage four - river
         System.out.println("Now lets see the river");
-        game.dealCard();
+        game.addCardToBoard();
         System.out.println(game.getBoard());
 
 

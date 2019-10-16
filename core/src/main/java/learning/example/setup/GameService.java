@@ -58,9 +58,25 @@ public class GameService {
         return opponentHole.getCardsString();
     }
 
-    public void dealCard (){
+    //method deals 2 cards to playerHole and opponentHole and deals three communal cards to to the board
+    public void setupGame () {
+        for (int i = 0; i < playerHole.getMaxSize(); i++){
+            playerHole.getCards().add(getCardFromDeck());
+        }
+
+        for (int i = 0; i < opponentHole.getMaxSize(); i++){
+            opponentHole.getCards().add(getCardFromDeck());
+        }
+
+        //Board must be different as holds 3, 4 then 5 cards depending on the phase of the game
+        for (int i = 0; i < 3; i++){
+            board.getCards().add(getCardFromDeck());
+        }
+    }
+
+    public void addCardToBoard(){
         log.info("Dealing Card to board");
-        board.addCardToBoard();
+        board.getCards().add(getCardFromDeck());
     }
 
     public String bestHandFlop (String holeCards){
