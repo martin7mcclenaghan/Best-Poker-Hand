@@ -6,12 +6,13 @@ public class Board extends CardCollection {
 
     private DeckService dealer;
 
-    public Board(DeckService dealer) {
-        super(3, dealer);
-        this.dealer = dealer;
+    public Board() {
+        super(3);
     }
 
     // == instance methods ==
+
+    // TODO this needs to be taken care of in the Game Service
     // method to add card to the board
     public void addCardToBoard() {
         if (this.getCards().size() >= 5) {
