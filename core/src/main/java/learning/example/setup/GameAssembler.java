@@ -14,12 +14,12 @@ public class GameAssembler {
         DeckFormatter deckProcessor = new DeckFormatter();
         Deck deck = new Deck(deckProcessor.getStandard52Cards());
         DeckService steve = new DeckService("Steve", deck);
-        Board board = new Board(steve);
+        Board board = new Board();
 
         //HoleCards must be specified as an implementation to stop players dealing themselves more cards
         //than they are allowed
-        HoleCards playerHole = new HoleCards(steve);
-        HoleCards opponentHole = new HoleCards(steve);
+        HoleCards playerHole = new HoleCards();
+        HoleCards opponentHole = new HoleCards();
 
         return new GameService(deck, board, playerHole, opponentHole);
 

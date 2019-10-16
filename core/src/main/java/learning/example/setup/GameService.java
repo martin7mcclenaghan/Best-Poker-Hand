@@ -74,9 +74,15 @@ public class GameService {
         }
     }
 
-    public void addCardToBoard(){
+//    public void addCardToBoard(){
+//        log.info("Dealing Card to board");
+//        board.getCards().add(getCardFromDeck());
+//    }
+
+    public void dealCardToBoard(){
         log.info("Dealing Card to board");
         board.getCards().add(getCardFromDeck());
+
     }
 
     public String bestHandFlop (String holeCards){

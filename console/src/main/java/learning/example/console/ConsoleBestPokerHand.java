@@ -12,11 +12,11 @@ public class ConsoleBestPokerHand {
     private static final Logger log = LoggerFactory.getLogger(ConsoleBestPokerHand.class);
 
     // == fields ==
-    private GameService game;
+    private GameService gameService;
 
     // == constructor ==
-    public ConsoleBestPokerHand(GameService game ) {
-        this.game = game;
+    public ConsoleBestPokerHand(GameService gameService) {
+        this.gameService = gameService;
     }
 
     public void playGame() {
@@ -24,25 +24,26 @@ public class ConsoleBestPokerHand {
 
         Scanner scanner = new Scanner(System.in);
 
-        // Stage one - players have their cards and board not yet seen
-        System.out.println("Your cards are " + game.getPlayerHole());
-        log.info("Opponents cards are " + game.getOpponentHole());
+        // Stage one - players and the board are dealt their cards
+        gameService.setupGame();
+        System.out.println("Your cards are " + gameService.getPlayerHole());
+        log.info("Opponents cards are " + gameService.getOpponentHole());
 
         // Stage two - flop
 		System.out.println("Now lets see the flop");
-		System.out.println(game.getBoard());
-        System.out.println("Your best hand is " + game.bestHandFlop(game.getPlayerHole()));
-        log.info("Opponent's best hand is " + game.bestHandFlop(game.getOpponentHole()));
+		System.out.println(gameService.getBoard());
+        System.out.println("Your best hand is " + gameService.bestHandFlop(gameService.getPlayerHole()));
+        log.info("Opponent's best hand is " + gameService.bestHandFlop(gameService.getOpponentHole()));
 
 		//Stage three - turn
         System.out.println("Now lets see the turn");
-        game.addCardToBoard();
-        System.out.println(game.getBoard());
+        gameService.dealCardToBoard();
+        System.out.println(gameService.getBoard());
 
         //Stage four - river
         System.out.println("Now lets see the river");
-        game.addCardToBoard();
-        System.out.println(game.getBoard());
+        gameService.dealCardToBoard();
+        System.out.println(gameService.getBoard());
 
 
     }
