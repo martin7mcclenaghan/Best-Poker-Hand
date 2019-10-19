@@ -8,9 +8,9 @@ public class ConsoleMain {
 
     public static void main(String[] args) {
 
-        GameAssembler gameFacade = new GameAssembler();
-        GameService game = gameFacade.assembleGame();
-        ConsoleBestPokerHand consoleGame = new ConsoleBestPokerHand(game);
+        GameAssembler gameAssembler = new GameAssembler();
+        GameService gameService = gameAssembler.assembleGame();
+        ConsoleBestPokerHand consoleGame = new ConsoleBestPokerHand(gameService);
         consoleGame.playGame();
     }
 }
