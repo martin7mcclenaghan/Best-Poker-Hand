@@ -14,7 +14,7 @@ import java.util.Random;
 public class GameService {
 
     //constants
-    Logger log = LoggerFactory.getLogger(GameService.class);
+    private static final Logger log = LoggerFactory.getLogger(GameService.class);
 
     // == fields ==
     private final Deck deck;
