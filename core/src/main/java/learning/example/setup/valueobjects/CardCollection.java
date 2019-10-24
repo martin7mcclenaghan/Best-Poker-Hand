@@ -17,6 +17,17 @@ public abstract class CardCollection {
     }
 
     // == instance methods ==
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Card card : this.cards) {
+            stringBuilder.append(card.getDescription());
+            stringBuilder.append(" ");
+        }
+
+        return stringBuilder.toString();
+    }
+
     public String getCardsString() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Card card : this.cards) {

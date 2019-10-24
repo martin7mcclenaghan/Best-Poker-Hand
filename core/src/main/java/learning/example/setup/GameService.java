@@ -1,9 +1,6 @@
 package learning.example.setup;
 
-import learning.example.setup.valueobjects.Board;
-import learning.example.setup.valueobjects.Card;
-import learning.example.setup.valueobjects.Deck;
-import learning.example.setup.valueobjects.HoleCards;
+import learning.example.setup.valueobjects.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,8 +43,8 @@ public class GameService {
     }
 
     // == public methods ==
-    public String getBoard() {
-        return board.getCardsString();
+    public CardCollection getBoard() {
+        return this.board;
     }
 
     public String getPlayerHole() {
