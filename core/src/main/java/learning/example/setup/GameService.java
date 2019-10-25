@@ -43,16 +43,17 @@ public class GameService {
     }
 
     // == public methods ==
+    //when printed to console getters implicitly call toString() defined in CardCollection
     public CardCollection getBoard() {
         return this.board;
     }
 
-    public String getPlayerHole() {
-        return playerHole.getCardsString();
+    public CardCollection getPlayerHole() {
+        return this.playerHole;
     }
 
-    public String getOpponentHole() {
-        return opponentHole.getCardsString();
+    public CardCollection getOpponentHole() {
+        return this.opponentHole;
     }
 
     //method deals 2 cards to playerHole and opponentHole and deals three communal cards to to the board
