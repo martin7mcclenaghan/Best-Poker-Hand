@@ -28,16 +28,6 @@ public abstract class CardCollection {
         return stringBuilder.toString();
     }
 
-    public String getCardsString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Card card : this.cards) {
-            stringBuilder.append(card.getDescription());
-            stringBuilder.append(" ");
-        }
-
-        return stringBuilder.toString();
-    }
-
     public List<Card> getCards (){
         return this.cards;
     }
