@@ -1,6 +1,5 @@
 package learning.example.setup;
 
-import learning.example.setup.processingobjects.DeckFormatter;
 import learning.example.setup.valueobjects.Board;
 import learning.example.setup.valueobjects.Deck;
 import learning.example.setup.valueobjects.HoleCards;

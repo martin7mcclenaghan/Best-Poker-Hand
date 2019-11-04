@@ -1,4 +1,4 @@
-package learning.example.setup.processingobjects;
+package learning.example.setup;
 
 import learning.example.setup.valueobjects.Card;
 
