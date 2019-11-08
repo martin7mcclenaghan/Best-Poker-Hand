@@ -1,6 +1,6 @@
 package learning.example.setup;
 
-import learning.example.setup.valueobjects.*;
+import learning.example.setup.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

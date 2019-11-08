@@ -1,6 +1,6 @@
 package learning.example.setup;
 
-import learning.example.setup.valueobjects.Card;
+import learning.example.setup.domain.Card;
 
 import java.util.ArrayList;
 import java.util.List;

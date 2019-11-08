@@ -1,8 +1,8 @@
 package learning.example.setup;
 
-import learning.example.setup.valueobjects.Board;
-import learning.example.setup.valueobjects.Deck;
-import learning.example.setup.valueobjects.HoleCards;
+import learning.example.setup.domain.Board;
+import learning.example.setup.domain.Deck;
+import learning.example.setup.domain.HoleCards;
 
 public class GameAssembler {
 

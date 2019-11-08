@@ -1,4 +1,4 @@
-package learning.example.setup.valueobjects;
+package learning.example.setup.domain;
 
 import java.util.List;
 
