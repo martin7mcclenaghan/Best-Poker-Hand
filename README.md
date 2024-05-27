@@ -1,6 +1,6 @@
 # Welcome to my Texas Hold'em guessing game!
 
-This is being built with Java 11 and Spring 2.1.6.
+This is being built with Java 17 and Spring 2.1.6.
 
 The object of the game is to guess whether, based upon your cards and the communal
 cards you can see, if you have the best hand vs your opponent. This will occur across
@@ -16,3 +16,7 @@ which houses the logic is my main focus currently. The majority of the logic is
 package private with the Game class exposing necessary methods to the user 
 loosely following the Facade design pattern. I am also using the Singleton design 
 pattern to ensure that there is only ever 1 deck object and one board object in existence. 
+
+Add some more text for commit 1.
+Commit 2
+Commit 3

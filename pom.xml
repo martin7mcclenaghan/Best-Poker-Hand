@@ -24,7 +24,7 @@
 	<description>A guessing game where you decide if your Texas Hold'em Poker hand is the best versus an unseen opponent's hand.</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 
 </project>
